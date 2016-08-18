@@ -18,7 +18,7 @@ public class LoggingService {
     
     public void log(String msg){
         
-        System.out.println( new Date() + "" + msg );
+        System.out.println("***" + new Date() + "" + msg + "***");
     }
     
 }

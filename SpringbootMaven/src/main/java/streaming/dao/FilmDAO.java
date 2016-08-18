@@ -3,28 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.service;
+package streaming.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import streaming.dao.FilmDAO;
+import org.springframework.stereotype.Repository;
+import streaming.service.LoggingService;
 
 /**
  *
  * @author admin
  */
-@Service
-public class FilmService {
+
+@Repository
+public class FilmDAO {
     
     @Autowired
     private LoggingService loggingService;
     
-    @Autowired
-    private FilmDAO filmDAO;
-    
-    public void save(){
-        
-       loggingService.log(" FilmService.save");
+    public  void save(){
+        loggingService.log("FilmDAO.save");
     }
     
 }
