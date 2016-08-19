@@ -6,6 +6,7 @@
 package streaming.service;
 
 import java.util.Date;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import streaming.dao.LogginDAOJPAImpl;
 import streaming.entity.DistributeurLoggin;
@@ -22,6 +23,7 @@ public class LoggingService {
         
         System.out.println("***" + new Date() + "" + msg + "***");
     }  
+    
     
     public void create(){
       DistributeurLoggin loggin = new DistributeurLoggin();
