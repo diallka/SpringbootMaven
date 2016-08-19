@@ -7,6 +7,8 @@ package streaming.service;
 
 import java.util.Date;
 import org.springframework.stereotype.Service;
+import streaming.dao.LogginDAOJPAImpl;
+import streaming.entity.DistributeurLoggin;
 
 /**
  *
@@ -19,6 +21,14 @@ public class LoggingService {
     public void log(String msg){
         
         System.out.println("***" + new Date() + "" + msg + "***");
+    }  
+    
+    public void create(){
+      DistributeurLoggin loggin = new DistributeurLoggin();
+      loggin.setDateLoggin(new Date());
+      loggin.setMsg(" message");
+      
+      new LogginDAOJPAImpl().create(loggin);
     }
     
 }
