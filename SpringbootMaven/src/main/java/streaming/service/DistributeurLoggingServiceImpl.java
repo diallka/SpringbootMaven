@@ -5,19 +5,22 @@
  */
 package streaming.service;
 
+import java.util.Date;
 import org.springframework.stereotype.Service;
 
 /**
  *
  * @author admin
- */                                           //Implement Interface
+ */
+
 @Service
-public class DistributeurServiceRetraitAccepteImpl implements DistributeurServiceInterface{
+public class DistributeurLoggingServiceImpl implements DistributeurLoggingServiceInterface{
 
     @Override
-    public boolean retrait(long idCompte, short code, long montant) {
-        
-        return true;
+    public void log(String msg) {
+        System.out.println("***" + new Date() + "" + msg + "***");
     }
+    
+    
     
 }

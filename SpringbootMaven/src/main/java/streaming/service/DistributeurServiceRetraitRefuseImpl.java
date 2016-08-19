@@ -5,10 +5,14 @@
  */
 package streaming.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author admin
  */
+
+@Service
 public class DistributeurServiceRetraitRefuseImpl implements DistributeurServiceInterface{
 
     @Override
