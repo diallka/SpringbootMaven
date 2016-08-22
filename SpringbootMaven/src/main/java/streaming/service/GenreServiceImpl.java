@@ -7,23 +7,24 @@ package streaming.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import streaming.dao.FilmDAOInterface;
-import streaming.entity.Film;
+import streaming.dao.GenreDAOInterface;
+import streaming.entity.Genre;
 
 /**
  *
  * @author pro
  */
 @Service
-public class FilmServiceImpl  implements FilmServiceInterface{
-
+public class GenreServiceImpl implements GenreServiceInterface{
+    
     @Autowired
-    private FilmDAOInterface filmDAOInterface;
+    private GenreDAOInterface genreDAOInterface;
 
-    public void creer(Film film) {
-        filmDAOInterface.creer(film);
+    @Override
+    public void creer(Genre genre) {
+        
+        genreDAOInterface.creer(genre);
+        
     }
-
-  
     
 }
