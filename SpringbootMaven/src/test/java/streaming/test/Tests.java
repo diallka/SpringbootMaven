@@ -16,6 +16,7 @@ import streaming.entity.Serie;
 import streaming.service.FilmServiceImpl;
 import streaming.service.GenreServiceInterface;
 import streaming.service.SerieServiceImpl;
+import streaming.service.SerieServiceInterface;
 import streaming.spring.SpringConfig;
 
 /**
@@ -29,23 +30,28 @@ public class Tests {
 
     //*********************************************   
     @Autowired
-    private FilmServiceImpl filmServiceImlp;
+    private FilmServiceImpl filmServiceInterface;
 
     @Test //Obligatoire sinon ecriture en base ne se fera pas.
     public void creerFilm() {
         Film film = new Film();
         film.setTitre("Tomorrow");
-        filmServiceImlp.creer(film);
+        filmServiceInterface.creer(film);
     }
     //*********************************************   
     @Autowired
-    private SerieServiceImpl serieServiceImpl;
+    private SerieServiceInterface serieServiceInterface;
 
+//    @Test
+//    public void creerSerie() {
+//        Serie serie = new Serie();
+//        serie.setTitre("Homeland");
+//        serieServiceInterface.creer(serie);
+//    }
+    
     @Test
-    public void creerSerie() {
-        Serie serie = new Serie();
-        serie.setTitre("Homeland");
-        serieServiceImpl.creer(serie);
+    public void supprimerSerie() {
+        serieServiceInterface.supprimer(2);
     }
     //*********************************************
     @Autowired

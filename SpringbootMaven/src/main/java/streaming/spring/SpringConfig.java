@@ -23,7 +23,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 @SpringBootApplication
 @EnableAutoConfiguration
 @ComponentScan(basePackages="streaming")
-@EnableJpaRepositories(basePackages = "streaming")
+@EnableJpaRepositories(basePackages = "streaming") //Active toutes les interfaces CRUDRepositories pour les entités existant dans streamin package
 public class SpringConfig {
     
     @Bean

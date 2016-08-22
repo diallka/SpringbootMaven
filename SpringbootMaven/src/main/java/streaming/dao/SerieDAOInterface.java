@@ -14,5 +14,8 @@ import streaming.entity.Serie;
 public interface SerieDAOInterface {
     
     public void creer(Serie serie);
+    public void mettre_a_jour(Serie serie);
+    public void supprimer(long serieId);
+    
     
 }

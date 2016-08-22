@@ -16,4 +16,5 @@ import streaming.entity.Film;
 public interface FilmDAOInterface {
     
     public void creer(Film film);
+    public void supprimer(Film film);
 }

@@ -26,6 +26,11 @@ public class FilmDAOImpl implements FilmDAOInterface{
         em.persist(film);
         em.getTransaction().commit();
     }
+
+    @Override
+    public void supprimer(Film film) {
+        
+    }
     
     
     

@@ -15,5 +15,7 @@ public interface SerieServiceInterface {
     
     public void creer(Serie serie);
     
+    public void supprimer(long serieId);
+    
     
 }
